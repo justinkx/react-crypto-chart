@@ -1,23 +1,24 @@
 import React, { memo, useRef, useEffect, useCallback } from "react";
 import { createChart } from "lightweight-charts";
+import { ChartSeries, TradeViewProps, TradeViewChart } from "./utils/types";
 
-const TradeView = ({
+const TradeView: React.FC<TradeViewProps> = ({
   initialChartData,
   updatedata = null,
   candleStickConfig = {},
   histogramConfig = {},
   chartLayout = {},
 }) => {
-  const resizeObserver = useRef();
-  const chartContainerRef = useRef();
-  const chart = useRef();
-  const candleSeries = useRef();
-  const volumeSeries = useRef();
+  const resizeObserver = useRef<any>();
+  const chartContainerRef = useRef<string | any>();
+  const chart = useRef<TradeViewChart | any>();
+  const candleSeries = useRef<ChartSeries | any>();
+  const volumeSeries = useRef<ChartSeries | any>();
 
   const setInitialData = useCallback(() => {
     candleSeries.current =
       chart?.current?.addCandlestickSeries(candleStickConfig);
-    candleSeries.current.setData(initialChartData);
+    candleSeries?.current.setData(initialChartData);
     volumeSeries.current = chart.current.addHistogramSeries(histogramConfig);
     volumeSeries?.current?.setData(initialChartData);
     candleSeries.current.applyOptions({
