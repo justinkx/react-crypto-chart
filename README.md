@@ -7,6 +7,8 @@
 
 #### crypto chart widget for react using binance api
 
+<img width="1434" alt="React Crypto Chart" src="https://user-images.githubusercontent.com/28846043/121532071-a4571e80-ca1c-11eb-9d08-3c8392737161.png">
+
 ## How To Install
 
 ```npm
@@ -29,14 +31,6 @@ import TradeViewChart from "react-crypto-chart";
 
 ## Properties
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-</style>
 <table class="tg">
 <thead>
   <tr>
