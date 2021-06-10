@@ -51,7 +51,7 @@ import TradeViewChart from "react-crypto-chart";
     <td class="tg-0pky">pair</td>
     <td class="tg-0pky">No</td>
     <td class="tg-0pky">String</td>
-    <td class="tg-0pky">BTCBUSD<br>Please refer binance api for more pairs<br><a href="https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md"><span style="color:#905">[binance rest api](https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md)</span></a></td>
+    <td class="tg-0pky">BTCBUSD<br>Please refer binance api for more pairs<br><a href="https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md">binance rest api</a></td>
   </tr>
   <tr>
     <td class="tg-0pky">interval</td>
@@ -62,7 +62,7 @@ import TradeViewChart from "react-crypto-chart";
   <tr>
     <td class="tg-0pky">candleStickConfig</td>
     <td class="tg-0pky">No</td>
-    <td class="tg-0pky">Object<br><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">[Candlestick Config type](</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="text-decoration:underline">TYPES.md#candlestick-config-type</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">)</span></a></td>
+    <td class="tg-0pky">Object<br><a href="https://github.com/justinkx/react-crypto-chart/blob/readme/TYPES.md#candlestick-config-type" target="_blank" rel="noopener noreferrer">Candlestick Config type</a></td>
     <td class="tg-0pky">
     <pre> 
     {
@@ -79,7 +79,7 @@ import TradeViewChart from "react-crypto-chart";
   <tr>
     <td class="tg-0pky">histogramConfig</td>
     <td class="tg-0pky">No</td>
-    <td class="tg-0pky">Object<br><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">[Histogram Config type](</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="text-decoration:underline">TYPES.md#histogram-config-type</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">)</span></a></td>
+    <td class="tg-0pky">Object<br><a href="https://github.com/justinkx/react-crypto-chart/blob/readme/TYPES.md#histogram-config-type" target="_blank" rel="noopener noreferrer">Histogram Config type</a></td>
     <td class="tg-0pky">
     <pre>{
         base: 0,
@@ -99,7 +99,7 @@ import TradeViewChart from "react-crypto-chart";
   <tr>
     <td class="tg-0pky">chartLayout</td>
     <td class="tg-0pky">No</td>
-    <td class="tg-0pky">Object<br><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">[Chart Layout types](</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="text-decoration:underline">TYPES.md#chart-layout-types</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">)</span></a></td>
+    <td class="tg-0pky">Object<br><a href="https://github.com/justinkx/react-crypto-chart/blob/readme/TYPES.md#chart-layout-types" target="_blank" rel="noopener noreferrer">Chart Layout types</a></td>
     <td class="tg-0pky">
     <pre>
     {
