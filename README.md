@@ -29,13 +29,111 @@ import TradeViewChart from "react-crypto-chart";
 
 ## Properties
 
-| Prop              | Required | Type                                                               | Default Value                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ----------------- | -------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| pair              | No       | String                                                             | BTCBUSD Please refer binance api for more pairs [binance rest api](https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md)                                                                                                                                                                                                                                                                               |
-| interval          | No       | String                                                             | 1m                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| candleStickConfig | No       | Object [Candlestick Config type](TYPES.md#candlestick-config-type) | {upColor :"#00c176", downColor : "#cf304a" , borderDownColor : "#cf304a" , borderUpColor : "#00c176" , wickDownColor : "#838ca1" , wickUpColor : "#838ca1" , }                                                                                                                                                                                                                                                             |
-| histogramConfig   | No       | Object [Histogram Config type](TYPES.md#histogram-config-type)     | { base : 0 , lineWidth : 2 , priceFormat : { type : "volume" , }, overlay : true , scaleMargins : { top : 0.8 , bottom : 0 , }, }                                                                                                                                                                                                                                                                                          |
-| chartLayout       | No       | Object [Chart Layout types](TYPES.md#chart-layout-types)           | { layout : { backgroundColor : "#ededed" , textColor : "#253248" , }, grid : { vertLines : { color : "#838fa3" , style : LineStyle . SparseDotted , }, horzLines : { color : "#838fa3" , style : LineStyle . SparseDotted , }, }, crosshair : { mode : CrosshairMode . Normal , }, priceScale : { borderColor : "#485c7b" , }, timeScale : { borderColor : "#485c7b" , timeVisible : true , secondsVisible : false , }, }; |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Prop</th>
+    <th class="tg-0pky">Required</th>
+    <th class="tg-0pky">Type</th>
+    <th class="tg-0pky">Default Value</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">pair</td>
+    <td class="tg-0pky">No</td>
+    <td class="tg-0pky">String</td>
+    <td class="tg-0pky">BTCBUSD<br>Please refer binance api for more pairs<br><a href="https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md"><span style="color:#905">[binance rest api](https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md)</span></a></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">interval</td>
+    <td class="tg-0pky">No</td>
+    <td class="tg-0pky">String</td>
+    <td class="tg-0pky">1m</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">candleStickConfig</td>
+    <td class="tg-0pky">No</td>
+    <td class="tg-0pky">Object<br><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">[Candlestick Config type](</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="text-decoration:underline">TYPES.md#candlestick-config-type</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">)</span></a></td>
+    <td class="tg-0pky">
+    <pre> 
+    {
+        upColor: "#00c176",
+        downColor: "#cf304a",
+        borderDownColor: "#cf304a",
+        borderUpColor: "#00c176",
+        wickDownColor: "#838ca1",
+        wickUpColor: "#838ca1",
+    }
+    </pre>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">histogramConfig</td>
+    <td class="tg-0pky">No</td>
+    <td class="tg-0pky">Object<br><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">[Histogram Config type](</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="text-decoration:underline">TYPES.md#histogram-config-type</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">)</span></a></td>
+    <td class="tg-0pky">
+    <pre>{
+        base: 0,
+        lineWidth: 2,
+        priceFormat: {
+            type: "volume",
+        },
+        overlay: true,
+        scaleMargins: {
+            top: 0.8,
+            bottom: 0,
+        },
+    }
+  </pre>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">chartLayout</td>
+    <td class="tg-0pky">No</td>
+    <td class="tg-0pky">Object<br><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">[Chart Layout types](</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="text-decoration:underline">TYPES.md#chart-layout-types</span></a><a href="https://www.tablesgenerator.com/README.md" target="_blank" rel="noopener noreferrer"><span style="color:#905">)</span></a></td>
+    <td class="tg-0pky">
+    <pre>
+    {
+        layout: {
+            backgroundColor: "#ededed",
+            textColor: "#253248",
+        },
+        grid: {
+            vertLines: {
+            color: "#838fa3",
+            style: LineStyle.SparseDotted,
+            },
+            horzLines: {
+            color: "#838fa3",
+            style: LineStyle.SparseDotted,
+            },
+        },
+        crosshair: {
+            mode: CrosshairMode.Normal,
+        },
+        priceScale: {
+            borderColor: "#485c7b",
+        },
+        timeScale: {
+            borderColor: "#485c7b",
+            timeVisible: true,
+            secondsVisible: false,
+        },
+    }
+    </pre>
+    </td>
+  </tr>
+</tbody>
+</table>
 
 ## Authors
 
