@@ -9,16 +9,18 @@ import {
   histogramDefaultConfig,
   defaultChartLayout,
 } from "./utils/constants";
+import { Props, CandleStickSocketData } from "./utils/types";
 
-const TradeViewChart = ({
+const TradeViewChart: React.FC<Props> = ({
   pair = "BTCUSD",
   interval = "1m",
   candleStickConfig = condleStickDefaultConfig,
   histogramConfig = histogramDefaultConfig,
   chartLayout = defaultChartLayout,
 }) => {
-  const [candleStickData, setCandleData] = useState(null);
-  const [updatedata, setUpdateData] = useState(null);
+  const [candleStickData, setCandleData] = useState<[] | null>(null);
+  const [updatedata, setUpdateData] =
+    useState<CandleStickSocketData | null>(null);
 
   const fetchCandleData = useCallback(async () => {
     const candleData = await fetchCandleStickData(pair);
@@ -33,7 +35,7 @@ const TradeViewChart = ({
     const ws = new WebSocket(
       `${WS_URL}/${pair.toLocaleLowerCase()}@kline_${interval}`
     );
-    ws.onopen = () => console.log("open");
+    // ws.onopen = () => console.log("open");
     ws.onmessage = (e) => {
       const message = JSON.parse(e.data);
       const parsedMessage = candleSocketAdaptor(message);

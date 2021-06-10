@@ -1,3 +1,5 @@
+import { CrosshairMode, LineStyle } from "lightweight-charts";
+
 export interface CandleStickSocketData {
   open: number;
   high: number;
@@ -44,4 +46,39 @@ export interface ChartSeries {
 export interface TradeViewChart {
   addCandlestickSeries: (config: CandleStickConfig) => {};
   addHistogramSeries: (config: HistogramConfig) => {};
+}
+export interface Props {
+  pair: string;
+  interval: string;
+  candleStickConfig: CandleStickConfig;
+  histogramConfig: HistogramConfig;
+  chartLayout: DeffaultChartLayout;
+}
+
+export interface DeffaultChartLayout {
+  layout?: {
+    backgroundColor: string;
+    textColor: string;
+  };
+  grid?: {
+    vertLines?: {
+      color: string;
+      style: LineStyle;
+    };
+    horzLines?: {
+      color: "#838fa3";
+      style: LineStyle;
+    };
+  };
+  crosshair?: {
+    mode: CrosshairMode;
+  };
+  priceScale?: {
+    borderColor: string;
+  };
+  timeScale?: {
+    borderColor: string;
+    timeVisible: boolean;
+    secondsVisible: boolean;
+  };
 }
