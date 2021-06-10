@@ -12,7 +12,7 @@ import {
 import { Props, CandleStickSocketData } from "./utils/types";
 
 const TradeViewChart: React.FC<Props> = ({
-  pair = "BTCUSD",
+  pair = "BTCBUSD",
   interval = "1m",
   candleStickConfig = condleStickDefaultConfig,
   histogramConfig = histogramDefaultConfig,
