@@ -1,6 +1,6 @@
-import React, { memo, useRef, useEffect, useCallback } from "react";
-import { createChart } from "lightweight-charts";
-import { ChartSeries, TradeViewProps, TradeViewChart } from "./utils/types";
+import React, { memo, useRef, useEffect, useCallback } from 'react';
+import { createChart } from 'lightweight-charts';
+import { ChartSeries, TradeViewProps, TradeViewChart } from './utils/types';
 
 const TradeView: React.FC<TradeViewProps> = ({
   initialChartData,
@@ -8,6 +8,13 @@ const TradeView: React.FC<TradeViewProps> = ({
   candleStickConfig = {},
   histogramConfig = {},
   chartLayout = {},
+  containerStyle = {
+    minWidth: '100%',
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 }) => {
   const resizeObserver = useRef<any>();
   const chartContainerRef = useRef<string | any>();
@@ -23,7 +30,7 @@ const TradeView: React.FC<TradeViewProps> = ({
     volumeSeries?.current?.setData(initialChartData);
     candleSeries.current.applyOptions({
       priceFormat: {
-        type: "price",
+        type: 'price',
         precision: 5,
         minMove: 0.001,
       },
@@ -54,7 +61,7 @@ const TradeView: React.FC<TradeViewProps> = ({
         width,
         height,
         priceFormat: {
-          type: "price",
+          type: 'price',
           precision: 5,
           minMove: 0.001,
         },
@@ -65,7 +72,13 @@ const TradeView: React.FC<TradeViewProps> = ({
 
     return () => resizeObserver.current.disconnect();
   }, []);
-  return <div ref={chartContainerRef} className="container" />;
+  return (
+    <div
+      ref={chartContainerRef}
+      className="chartContainer"
+      style={containerStyle}
+    />
+  );
 };
 
 export default memo(TradeView);

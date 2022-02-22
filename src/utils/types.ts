@@ -1,4 +1,4 @@
-import { CrosshairMode, LineStyle } from "lightweight-charts";
+import { CrosshairMode, LineStyle } from 'lightweight-charts';
 
 export interface CandleStickSocketData {
   open: number;
@@ -15,6 +15,7 @@ export interface TradeViewProps {
   candleStickConfig: CandleStickConfig;
   histogramConfig: HistogramConfig;
   chartLayout: {};
+  containerStyle: {};
 }
 
 export interface CandleStickConfig {
@@ -66,7 +67,7 @@ export interface DeffaultChartLayout {
       style: LineStyle;
     };
     horzLines?: {
-      color: "#838fa3";
+      color: '#838fa3';
       style: LineStyle;
     };
   };
