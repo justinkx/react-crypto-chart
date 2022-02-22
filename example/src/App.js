@@ -3,11 +3,7 @@ import TradeViewChart from 'react-crypto-chart';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <TradeViewChart pair="BTCBUSD" />
-    </div>
-  );
+  return <TradeViewChart pair="BTCBUSD" />;
 }
 
 export default App;

@@ -15,7 +15,9 @@ export interface TradeViewProps {
   candleStickConfig: CandleStickConfig;
   histogramConfig: HistogramConfig;
   chartLayout: {};
-  containerStyle: {};
+  containerStyle?: {
+    [x: string]: any;
+  };
 }
 
 export interface CandleStickConfig {

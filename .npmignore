@@ -2,7 +2,7 @@ __test__
 
 # dependencies
 /node_modules
-
+/example
 
 # testing
 /coverage

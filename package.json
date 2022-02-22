@@ -1,6 +1,6 @@
 {
   "name": "react-crypto-chart",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "crypto chart widget for react using binance api",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
