@@ -138,6 +138,21 @@ import TradeViewChart from 'react-crypto-chart';
     </pre>
     </td>
   </tr>
+  <tr>
+    <td class="tg-0pky">containerStyle</td>
+    <td class="tg-0pky">No</td>
+    <td class="tg-0pky">Object</td>
+    <td class="tg-0pky">
+    <pre>
+    {
+      maxWidth: '100%',
+      maxHeight: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    }
+  </pre></td>
+  </tr>
 </tbody>
 </table>
 

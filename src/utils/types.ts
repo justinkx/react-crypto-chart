@@ -56,6 +56,9 @@ export interface Props {
   candleStickConfig: CandleStickConfig;
   histogramConfig: HistogramConfig;
   chartLayout: DeffaultChartLayout;
+  containerStyle?: {
+    [x: string]: any;
+  };
 }
 
 export interface DeffaultChartLayout {

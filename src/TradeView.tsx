@@ -9,8 +9,8 @@ const TradeView: React.FC<TradeViewProps> = ({
   histogramConfig = {},
   chartLayout = {},
   containerStyle = {
-    minWidth: '100%',
-    minHeight: '100vh',
+    maxWidth: '100%',
+    maxHeight: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
