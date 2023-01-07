@@ -1,4 +1,4 @@
-export default URL = {
+const url: {[key:string]:{[key:string]:string} }   = {
     main: {
         base: "https://api.binance.com/api/v3/klines?",
         ws: "wss://stream.binance.com:9443/ws"
@@ -14,13 +14,13 @@ export default URL = {
 };
 
 export function getBaseUrl(useFuturesTestnet: boolean, useSpotTestnet: boolean): string {
-    if (useFuturesTestnet && !useSpotTestnet) return URL.future.base;
-    else if (!useFuturesTestnet && useSpotTestnet) return URL.spot.base;
-    return URL.main.base;
+    if (useFuturesTestnet && !useSpotTestnet) return url.future.base;
+    else if (!useFuturesTestnet && useSpotTestnet) return url.spot.base;
+    return url.main.base;
 }
 
 export function getWebsocketUrl(useFuturesTestnet: boolean, useSpotTestnet: boolean): string {
-    if (useFuturesTestnet && !useSpotTestnet) return URL.future.ws;
-    else if (!useFuturesTestnet && useSpotTestnet) return URL.spot.ws;
-    return URL.main.ws;
+    if (useFuturesTestnet && !useSpotTestnet) return url.future.ws;
+    else if (!useFuturesTestnet && useSpotTestnet) return url.spot.ws;
+    return url.main.ws;
 }
