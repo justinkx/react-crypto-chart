@@ -56,6 +56,8 @@ export interface Props {
   candleStickConfig: CandleStickConfig;
   histogramConfig: HistogramConfig;
   chartLayout: DeffaultChartLayout;
+  useFuturesTestnet?: boolean;
+  useSpotTestnet?: boolean;
   containerStyle?: {
     [x: string]: any;
   };
