@@ -4,7 +4,7 @@ const url: {[key:string]:{[key:string]:string} }   = {
         ws: "wss://stream.binance.com:9443/ws"
     },
     future: {
-        base: "https://testnet.binancefuture.com/v1/klines?",
+        base: "https://testnet.binancefuture.com/fapi/v1/klines?",
         ws: "wss://stream.binancefuture.com/ws"
     },
     spot: {
@@ -14,13 +14,21 @@ const url: {[key:string]:{[key:string]:string} }   = {
 };
 
 export function getBaseUrl(useFuturesTestnet: boolean, useSpotTestnet: boolean): string {
-    if (useFuturesTestnet && !useSpotTestnet) return url.future.base;
-    else if (!useFuturesTestnet && useSpotTestnet) return url.spot.base;
+    if (useFuturesTestnet && !useSpotTestnet) {
+        return url.future.base;
+    }
+    if (!useFuturesTestnet && useSpotTestnet) {
+        return url.spot.base;
+    }
     return url.main.base;
 }
 
 export function getWebsocketUrl(useFuturesTestnet: boolean, useSpotTestnet: boolean): string {
-    if (useFuturesTestnet && !useSpotTestnet) return url.future.ws;
-    else if (!useFuturesTestnet && useSpotTestnet) return url.spot.ws;
+    if (useFuturesTestnet && !useSpotTestnet) {
+        return url.future.ws;
+    }
+    if (!useFuturesTestnet && useSpotTestnet) {
+        return url.spot.ws;
+    }
     return url.main.ws;
 }
