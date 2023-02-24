@@ -6,6 +6,7 @@
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "author": "Justin K Xavier",
+  "private": false,
   "repository": {
     "url": "https://github.com/justinkx/react-crypto-chart.git"
   },
