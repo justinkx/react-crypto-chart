@@ -19,7 +19,7 @@ npm install
 npm start
 ```
 
-- [Stackblitz example](https://stackblitz.com/edit/react-crypto-chart)
+- [Stackblitz example](https://stackblitz.com/edit/react-crypto-chart-jcogao)
 
 ## How To Install
 
