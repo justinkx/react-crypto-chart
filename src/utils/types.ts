@@ -1,5 +1,15 @@
 import { CrosshairMode, LineStyle } from 'lightweight-charts';
 
+export interface CandleStickAdaptorResult {
+  time: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  value: number;
+  color: string;
+}
+
 export interface CandleStickSocketData {
   open: number;
   high: number;
@@ -10,7 +20,7 @@ export interface CandleStickSocketData {
   color: string;
 }
 export interface TradeViewProps {
-  initialChartData: [];
+  initialChartData: CandleStickAdaptorResult[];
   updatedata: CandleStickSocketData | null;
   candleStickConfig: CandleStickConfig;
   histogramConfig: HistogramConfig;
@@ -56,6 +66,8 @@ export interface Props {
   candleStickConfig: CandleStickConfig;
   histogramConfig: HistogramConfig;
   chartLayout: DeffaultChartLayout;
+  useFuturesTestnet?: boolean;
+  useSpotTestnet?: boolean;
   containerStyle?: {
     [x: string]: any;
   };

@@ -70,7 +70,7 @@ import TradeViewChart from 'react-crypto-chart';
     <td class="tg-0pky">No</td>
     <td class="tg-0pky">Object<br><a href="https://github.com/justinkx/react-crypto-chart/blob/readme/TYPES.md#candlestick-config-type" target="_blank" rel="noopener noreferrer">Candlestick Config type</a></td>
     <td class="tg-0pky">
-    <pre> 
+    <pre>
     {
         upColor: "#00c176",
         downColor: "#cf304a",
@@ -153,12 +153,30 @@ import TradeViewChart from 'react-crypto-chart';
     }
   </pre></td>
   </tr>
+  <tr>
+    <td class="tg-0pky">useFuturesTestnet</td>
+    <td class="tg-0pky">No</td>
+    <td class="tg-0pky">Boolean</td>
+    <td class="tg-0pky">
+    <pre>false</pre>
+    </td>
+  </tr>
+   <tr>
+    <td class="tg-0pky">useSpotTestnet</td>
+    <td class="tg-0pky">No</td>
+    <td class="tg-0pky">Boolean</td>
+    <td class="tg-0pky">
+    <pre>false</pre>
+    </td>
+  </tr>
 </tbody>
 </table>
 
 ## Authors
 
 - **Justin K Xavier** - _Initial work_ - [LinkedIn](https://www.linkedin.com/in/justin-k-xavier-59b82710a/)
+
+- **Rakibul Yeasin** - _Spot and Future Testnet_ - [Github](https://github.com/dreygur)
 
 See also the list of [contributors](https://github.com/justinkx/RNChallenge_1/graphs/contributors) who participated in this project.
 

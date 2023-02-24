@@ -1,5 +1,5 @@
 {
-  "name": "react-crypto-chart",
+  "name": "@dreygur/react-crypto-chart",
   "version": "0.0.6",
   "description": "crypto chart widget for react using binance api",
   "main": "./lib/cjs/index.js",
