@@ -19,7 +19,7 @@ npm install
 npm start
 ```
 
-- [Stackblitz example](https://stackblitz.com/edit/react-crypto-chart-jcogao)
+- [Stackblitz example](https://stackblitz.com/edit/react-crypto-chart)
 
 ## How To Install
 
@@ -175,8 +175,6 @@ import TradeViewChart from 'react-crypto-chart';
 ## Authors
 
 - **Justin K Xavier** - _Initial work_ - [LinkedIn](https://www.linkedin.com/in/justin-k-xavier-59b82710a/)
-
-- **Rakibul Yeasin** - _Spot and Future Testnet_ - [Github](https://github.com/dreygur)
 
 See also the list of [contributors](https://github.com/justinkx/RNChallenge_1/graphs/contributors) who participated in this project.
 

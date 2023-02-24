@@ -6,6 +6,13 @@
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "author": "Justin K Xavier",
+  "contributors": [
+    {
+      "name": "Rakibul Yeasin",
+      "email": "ryeasin03@gmail.com",
+      "url": "https://dreygur.js.org/"
+    }
+  ],
   "repository": {
     "url": "https://github.com/justinkx/react-crypto-chart.git"
   },
