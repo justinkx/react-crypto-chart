@@ -13,7 +13,7 @@ const url: { [key: string]: { [key: string]: string } } = {
   }
 };
 
-export function getBaseUrl(useFuturesTestnet: boolean, useSpotTestnet: boolean): string {
+export function getBaseUrl({ useFuturesTestnet, useSpotTestnet }: { useFuturesTestnet?: boolean, useSpotTestnet?:boolean }): string {
   if (useFuturesTestnet && !useSpotTestnet) {
     return url.future.base;
   }
@@ -23,7 +23,7 @@ export function getBaseUrl(useFuturesTestnet: boolean, useSpotTestnet: boolean):
   return url.main.base;
 }
 
-export function getWebsocketUrl(useFuturesTestnet: boolean, useSpotTestnet: boolean): string {
+export function getWebsocketUrl({ useFuturesTestnet, useSpotTestnet }: { useFuturesTestnet?: boolean, useSpotTestnet?: boolean }): string {
   if (useFuturesTestnet && !useSpotTestnet) {
     return url.future.ws;
   }

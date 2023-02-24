@@ -62,10 +62,10 @@ export interface TradeViewChart {
 }
 export interface Props {
   pair: string;
-  interval: string;
-  candleStickConfig: CandleStickConfig;
-  histogramConfig: HistogramConfig;
-  chartLayout: DeffaultChartLayout;
+  interval?: string;
+  candleStickConfig?: CandleStickConfig;
+  histogramConfig?: HistogramConfig;
+  chartLayout?: DeffaultChartLayout;
   useFuturesTestnet?: boolean;
   useSpotTestnet?: boolean;
   containerStyle?: {

@@ -7,7 +7,7 @@ export const fetchCandleStickData = async (
   useFuturesTestnet = false,
   useSpotTestnet = false,
 ) => {
-  const url = `${getBaseUrl(useFuturesTestnet, useSpotTestnet)}symbol=${symbol}&interval=${interval}`;
+  const url = `${getBaseUrl({ useFuturesTestnet, useSpotTestnet })}symbol=${symbol}&interval=${interval}`;
   const result = await fetch(url);
   const data = await result.json();
   return parseCandleStickData(data);
