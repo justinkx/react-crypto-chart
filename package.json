@@ -1,10 +1,10 @@
 {
-  "name": "@dreygur/react-crypto-chart",
-  "version": "0.0.7",
+  "name": "react-crypto-chart",
+  "version": "0.0.6",
   "description": "crypto chart widget for react using binance api",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
-  "types": "lib/esm/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
   "author": "Justin K Xavier",
   "repository": {
     "url": "https://github.com/justinkx/react-crypto-chart.git"
@@ -16,7 +16,7 @@
     "build:cjs": "tsc --module commonjs --outDir lib/cjs"
   },
   "files": [
-    "lib"
+    "/lib"
   ],
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -30,4 +30,5 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
+}
 }
