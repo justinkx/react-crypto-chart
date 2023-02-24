@@ -1,17 +1,13 @@
-export const candleStickAdaptor = (data) => {
+import { CandleStickAdaptorResult } from "./types";
+
+export const candleStickAdaptor = (data: any): CandleStickAdaptorResult => {
   const [
     openTime,
     open,
     high,
     low,
     close,
-    volume,
-    closeTime,
-    quoteAssetVolume,
-    numberOfTrades,
-    takerBuyBaseAssetVolume,
-    takerBuyQuotessetVolume,
-    ignore,
+    volume
   ] = data;
   return {
     time: openTime / 1000,
@@ -21,17 +17,10 @@ export const candleStickAdaptor = (data) => {
     close: parseFloat(close),
     value: parseFloat(volume),
     color: open < close ? "#005a40" : "#82112b",
-
-    // closeTime,
-    // quoteAssetVolume,
-    // numberOfTrades,
-    // takerBuyBaseAssetVolume,
-    // takerBuyQuotessetVolume,
-    // ignore,
   };
 };
 
-export const candleSocketAdaptor = (data) => {
+export const candleSocketAdaptor = (data: any) => {
   const {
     k: { T, o, c, h, l, v, V },
   } = data;

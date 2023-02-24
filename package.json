@@ -6,6 +6,13 @@
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "author": "Justin K Xavier",
+  "contributors": [
+    {
+      "name": "Rakibul Yeasin",
+      "email": "ryeasin03@gmail.com",
+      "url": "https://dreygur.js.org/"
+    }
+  ],
   "repository": {
     "url": "https://github.com/justinkx/react-crypto-chart.git"
   },
@@ -19,17 +26,15 @@
     "/lib"
   ],
   "devDependencies": {
-    "@types/react": "^17.0.11",
-    "@types/react-dom": "^17.0.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "typescript": "^4.3.2"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
   },
   "dependencies": {
     "lightweight-charts": "^3.8.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

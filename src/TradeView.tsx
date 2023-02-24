@@ -23,8 +23,7 @@ const TradeView: React.FC<TradeViewProps> = ({
   const volumeSeries = useRef<ChartSeries | any>();
 
   const setInitialData = useCallback(() => {
-    candleSeries.current =
-      chart?.current?.addCandlestickSeries(candleStickConfig);
+    candleSeries.current = chart?.current?.addCandlestickSeries(candleStickConfig);
     candleSeries?.current.setData(initialChartData);
     volumeSeries.current = chart.current.addHistogramSeries(histogramConfig);
     volumeSeries?.current?.setData(initialChartData);
@@ -72,6 +71,7 @@ const TradeView: React.FC<TradeViewProps> = ({
 
     return () => resizeObserver.current.disconnect();
   }, []);
+
   return (
     <div
       ref={chartContainerRef}

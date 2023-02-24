@@ -1,11 +1,13 @@
-import { BASE_URL } from "./constants";
+import { getBaseUrl } from "./urls";
 import { parseCandleStickData } from "./candleStickService";
 
 export const fetchCandleStickData = async (
   symbol = "BTCBUSD",
-  interval = "1m"
+  interval = "1m",
+  useFuturesTestnet = false,
+  useSpotTestnet = false,
 ) => {
-  const url = `${BASE_URL}symbol=${symbol}&interval=${interval}`;
+  const url = `${getBaseUrl({ useFuturesTestnet, useSpotTestnet })}symbol=${symbol}&interval=${interval}`;
   const result = await fetch(url);
   const data = await result.json();
   return parseCandleStickData(data);
